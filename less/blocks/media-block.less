@@ -1,0 +1,139 @@
+@import "../variables.less";
+@import "../mixins.less";
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.media-block {
+  border-bottom: 3px solid #000;
+  margin-bottom: 6px;
+
+  &__title {
+    .font-sizes(24px, 30px);
+    margin: 0;
+    padding: 40px 5px 20px 0;
+  }
+
+  &__text {
+    font-family: 'opensans', 'Arial', sans-serif;
+    margin: 0;
+    padding-bottom: 27px;
+  }
+
+  &__extras {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+  }
+
+  &__date {
+    .font-sizes(30px, 36px);
+    color: @coral-color;
+    margin: 0;
+    padding: 4px 0 5px 0;
+  }
+
+  &__more {
+    min-height: 45px;
+    line-height: 45px;
+    min-width: 120px;
+    border-left: 1px solid #000;
+    text-align: center;
+  }
+
+  &__more--link {
+    text-decoration: none;
+    display: block;
+    color: #000;
+  }
+
+  &--extra-space {
+    margin-bottom: 2px;
+  }
+
+  &--extra-space .media-block__title {
+    padding-bottom: 29px;
+  }
+
+  &--extra-space .media-block__text {
+    padding-bottom: 30px;
+  }
+
+  &__text--lower-padding {
+    padding-bottom: 12px;
+  }
+
+  &__text--more-padding {
+    padding-right: 5px;
+    padding-bottom: 31px;
+  }
+}
+
+@media (min-width: 800px) {
+  .media-block {
+    padding-left: 114px;
+    position: relative;
+    margin-bottom: 0;
+
+    &__title {
+      font-family: 'opensans-bold', 'Arial', sans-serif;
+      .font-sizes(18px, 24px);
+      padding-top: 45px;
+      padding-bottom: 11px;
+    }
+
+    &__text {
+      padding-bottom: 14px;
+    }
+
+    &__extras {
+      border-top: none;
+      justify-content: flex-end;
+    }
+
+    &__date {
+      .font-sizes(36px, 40px);
+      position: absolute;
+      top: 40px;
+      left: -2px;
+    }
+
+    &__more {
+      min-width: 151px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+    }
+
+    &--extra-space .media-block__title {
+      padding-bottom: 10px;
+    }
+
+    &--extra-space .media-block__text {
+      padding-bottom: 13px;
+    }
+
+    &__text--lower-padding {
+      padding-bottom: 8px;
+    }
+
+    &__text--more-padding {
+      padding-bottom: 24px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .media-block {
+
+    &--extra-space .media-block__title {
+      padding-top: 42px;
+      padding-bottom: 8px;
+    }
+
+    &--extra-space .media-block__text {
+      padding-bottom: 18px;
+    }
+  }
+}

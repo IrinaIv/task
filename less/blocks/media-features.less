@@ -1,0 +1,75 @@
+@import "../mixins.less";
+
+.media-features {
+  padding: 0 10px 20px 10px;
+
+  &__heading {
+    border-bottom: 1px solid #dbdbdb;
+    padding-top: 13px;
+  }
+
+  &__title {
+    .font-sizes(30px, 36px);
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  &__date--mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .media-features {
+    padding: 0 20px 45px 20px;
+
+    &__heading {
+      border-bottom: 1px solid #dbdbdb;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 21px;
+    }
+
+    &__title {
+      .font-sizes(36px, 40px);
+      padding-bottom: 14px;
+    }
+
+    &__date--mobile-hidden {
+      display: block;
+    }
+
+    &__select-date {
+      font-family: 'opensans', 'Arial', sans-serif;
+      position: relative;
+      padding-right: 31px;
+      margin-top: 16px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+    }
+
+    &__select-date::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 11px;
+      background: transparent url('../img/icon_arrow.svg') no-repeat;
+      top: 7px;
+      left: 56px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .media-features {
+    padding: 0 510px 40px 230px;
+    position: relative;
+
+    &__heading {
+      padding-top: 17px;
+    }
+  }
+}

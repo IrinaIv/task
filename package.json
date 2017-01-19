@@ -1,0 +1,38 @@
+{
+  "name": "task",
+  "version": "0.1.0",
+  "author": "Irina Ivashkova",
+  "description": "test task for DEFA",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "browser-sync": "^2.18.6",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "editorconfig-cli": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-build": "^0.5.3",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-serve": "^1.4.0",
+    "gulp-svgmin": "^1.2.3",
+    "run-sequence": "^1.2.2"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve",
+    "test": "editorconfig-cli"
+  }
+}

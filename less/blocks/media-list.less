@@ -1,0 +1,76 @@
+@import "../variables.less";
+@import "../mixins.less";
+
+.media-list {
+  margin: 0;
+  padding: 20px 0 5px 40px;
+  list-style-type: none;
+  .font-sizes(21px, 40px);
+
+  &__item-link {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__item-link--active {
+    color: @coral-color;
+    position: relative;
+  }
+
+  &__item-link--active::before {
+    content: '';
+    position: absolute;
+    width:18px;
+    height: 13px;
+    background: transparent url('../img/icon_tick.svg') no-repeat;
+    top: 6px;
+    left: -39px;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .media-list {
+    .font-sizes(24px, 40px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 19px 35px 20px 36px;
+
+    &__item {
+      width: 50%;
+    }
+
+    &__item-link--active::before {
+      top: 9px;
+      left: -33px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .media-list {
+    font-family: 'opensans-semibold', 'Arial', sans-serif;
+    .font-sizes(18px, 40px);
+    display: block;
+    border-top: 1px solid #dbdbdb;
+    padding: 16px 35px 40px 28px;
+
+    &__item {
+      width: 100%;
+    }
+
+    &__item-link {
+      border-bottom: 1px dashed #000;
+    }
+
+    &__item-link--active {
+      border-bottom-color: @coral-color;
+    }
+
+    &__item-link--active::before {
+      top: 6px;
+      left: -27px;
+    }
+  }
+}
